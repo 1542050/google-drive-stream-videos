@@ -2,7 +2,7 @@
 * @Author: kimbui
 * @Date:   2017-03-08 09:30:11
 * @Last Modified by:   kimbui
-* @Last Modified time: 2017-03-09 12:41:51
+* @Last Modified time: 2017-03-09 12:53:17
 */
 
 'use strict';
@@ -13,7 +13,7 @@ const app = require('router')()
 app.use(require('./lib/parse-query'))
 
 // Create API Stream Video
-app.get('/kimdepzai', require('./lib/videoplayback'))
+app.get('/videoplayback', require('./lib/videoplayback'))
 
 // Create API Get Video From Google Drive
 app.get('/:provider/:id', function (req, res) {
