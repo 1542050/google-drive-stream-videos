@@ -2,19 +2,25 @@
 * @Author: kimbui
 * @Date:   2017-03-08 09:30:11
 * @Last Modified by:   kimbui
-* @Last Modified time: 2017-03-08 16:09:56
+* @Last Modified time: 2017-03-09 11:24:33
 */
 
 'use strict';
 require('dotenv').load();
+const getVideo = require('./lib/get-video')
 var http = require('http')
-const app = require('router')
+const app = require('router')()
 
-module.main = http.createServer((req, res) => {
-  console.log(process.env.VIRTUAL_HOST)
-  app(req, res)
-  res.end()
+// Create API Get Video From Google Drive
+app.get('/:provider/:id', function (req, res) {
+  getVideo(req, res, req.params.id)
 })
 
-module.main.listen(8000)
+
+module.exports = http.createServer((req, res) => {
+  app(req, res, require('finalhandler')(req, res))
+  // res.end()
+})
+
+module.exports.listen(8000)
 console.log("Server running at http://127.0.0.1:8000/");
