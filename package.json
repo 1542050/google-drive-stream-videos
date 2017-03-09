@@ -1,5 +1,5 @@
 {
-  "name": "google_stream_videos",
+  "name": "google_videos_api_stream",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,6 +20,13 @@
     "pino": "^3.3.2",
     "router": "^1.1.5",
     "split2": "^2.1.1",
-    "through2": "^2.0.3"
+    "through2": "^2.0.3",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
   }
 }

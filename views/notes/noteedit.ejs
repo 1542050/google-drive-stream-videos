@@ -1,0 +1,11 @@
+<% include ../top %>
+<form method='POST' action='/notesave'>
+    <input type='hidden' name='docreate' value='<%= docreate ? "create" : "update"%>'>
+    <p>Key: <input type='text' name='notekey' value='<%= note ? notekey : "" %>'></p>
+    <p>Title: <input type='text' name='title' value='<%= note ? note.title : "" %>'></p>
+    <br/>
+    <textarea rows=5 cols=40 name='body'><%= note ? note.body : "" %></textarea>
+    <br/>
+    <input type='submit' value='Submit' />
+</form>
+<% include ../bottom %>
